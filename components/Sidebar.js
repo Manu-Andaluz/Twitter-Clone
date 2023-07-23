@@ -22,7 +22,6 @@ import { useRouter } from "next/router";
 export default function Sidebar() {
   const router = useRouter();
   const [currentUser, setCurrentUser] = useRecoilState(userState);
-  console.log(currentUser);
   const auth = getAuth();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
